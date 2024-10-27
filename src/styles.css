@@ -16,7 +16,6 @@ body {
 }
 
 .wrapper {
-    background-color: white;
     width: 750px;
     display: flex;
     flex-direction: column;
@@ -25,20 +24,48 @@ body {
 .top,
 .main,
 .footer {
+    padding: 25px 40px;
+}
+
+.top {
+    background: linear-gradient(170deg, #d63417 75%, #ffffff 35%);
+    /* Adjusting the angle and color stops for a sharp transition */
+}
+
+
+.main {
     background-color: white;
-    margin: 25px 40px;
+}
+
+.footer {
+    background-color: #d63417;
 }
 
 .top-container {
     display: flex;
+    align-items: center;
 }
 
 .info-box {
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
+    flex: 1;
     background-color: white;
-    border: 1px black solid
+    border: 1px black solid;
+}
+
+.image-wrapper {
+    position: relative;
+    flex: 0.6
+}
+
+.header-img-text {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: pink;
+    font-size: 20px
 }
 
 .info-box > * {
@@ -54,22 +81,22 @@ body {
 }
 
 .top img {
-    width: 40%;
+    width: 100%;
     height: auto;
-    flex-shrink: 0;
 }
 
-p {
-    color: red
-}
 
 .main {
     background-color: white;
 }
 
+.main-topic {
+    margin-bottom: 12px;
+}
+
 .projects {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     overflow: auto;
     gap: 16px;
 }
@@ -86,3 +113,32 @@ p {
     object-position: center center
 }
 
+.card-info {
+    margin: 4px 12px;
+}
+
+.card-top {
+    margin-bottom: 6px;
+}
+
+
+
+.footer {
+    display: flex;
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    flex: 0.6;
+    gap: 12px;
+}
+
+.footer-image-wrapper {
+    flex: 0.4;
+}
+
+.footer-image-wrapper img {
+    width: 100%;
+    height: auto;
+}
