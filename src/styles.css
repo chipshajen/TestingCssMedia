@@ -1,3 +1,23 @@
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: grey;
+    align-items: center;
+}
+
+@media (max-width: 800px) {
+    body {
+        background-color: blue;
+    }
+}
+
+.top,
+.main,
+.footer {
+    
+}
+
 p {
     color: red
 }
