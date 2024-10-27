@@ -1,9 +1,12 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
 body {
     display: flex;
-    flex-direction: column;
-    height: 100vh;
     background-color: grey;
-    align-items: center;
+    justify-content: center;
 }
 
 @media (max-width: 800px) {
@@ -12,12 +15,61 @@ body {
     }
 }
 
-.top,
-.main,
-.footer {
-    
+.wrapper {
+    background-color: blue;
+    width: 750px;
+    display: flex;
+    flex-direction: column;
+}
+
+.top {
+    background-color: white
+}
+
+.top-container {
+    display: flex;
+    padding: 15px 25px;
+}
+
+.info-box {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    background-color: white;
+    border: 1px black solid
+}
+
+.info-box > * {
+    margin: 0;
+    padding: 0;
+    color: black;
+    margin: 10px
+}
+
+.socials {
+    display: flex;
+    justify-content: end;
+}
+
+.top img {
+    width: 40%;
+    height: auto;
+    flex-shrink: 0;
 }
 
 p {
     color: red
 }
+
+.main {
+    background-color: white;
+}
+
+.projects {
+    display: grid;
+}
+
+.card img {
+    width: 150px
+}
+
