@@ -16,19 +16,21 @@ body {
 }
 
 .wrapper {
-    background-color: blue;
+    background-color: white;
     width: 750px;
     display: flex;
     flex-direction: column;
 }
 
-.top {
-    background-color: white
+.top,
+.main,
+.footer {
+    background-color: white;
+    margin: 25px 40px;
 }
 
 .top-container {
     display: flex;
-    padding: 15px 25px;
 }
 
 .info-box {
@@ -67,9 +69,20 @@ p {
 
 .projects {
     display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    overflow: auto;
+    gap: 16px;
+}
+
+.card {
+    border: 2px solid red
 }
 
 .card img {
-    width: 150px
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    height: auto;
+    object-fit: cover;
+    object-position: center center
 }
 
