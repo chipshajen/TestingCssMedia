@@ -7,6 +7,7 @@ body {
     display: flex;
     background-color: grey;
     justify-content: center;
+    font-family:Arial, Helvetica, sans-serif
 }
 
 @media (max-width: 800px) {
@@ -78,9 +79,20 @@ body {
 .socials {
     display: flex;
     justify-content: end;
+    gap: 12px;
 }
 
-.top img {
+.socials img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.1s ease-in-out;
+}
+
+.socials img:hover {
+    transform: scale(1.2)
+}
+
+.top .image-wrapper img {
     width: 100%;
     height: auto;
 }
@@ -102,7 +114,8 @@ body {
 }
 
 .card {
-    border: 2px solid red
+    border: 2px solid red;
+    
 }
 
 .card img {
@@ -110,8 +123,10 @@ body {
     aspect-ratio: 3 / 2;
     height: auto;
     object-fit: cover;
-    object-position: center center
+    object-position: center center;
 }
+
+
 
 .card-info {
     margin: 4px 12px;
