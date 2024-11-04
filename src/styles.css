@@ -7,7 +7,8 @@ body {
     display: flex;
     background-color: grey;
     justify-content: center;
-    font-family:Arial, Helvetica, sans-serif
+    font-family:Arial, Helvetica, sans-serif;
+    justify-items: center;
 }
 
 @media (max-width: 800px) {
@@ -17,9 +18,12 @@ body {
 }
 
 .wrapper {
-    width: 750px;
+    width: 100%;           /* Makes it responsive to the screen size */
+    max-width: 750px;      /* Sets a maximum width to keep it from getting too wide */
     display: flex;
     flex-direction: column;
+    align-items: center;   /* Centers content horizontally */
+    margin: 0 auto;        /* Centers .wrapper in the viewport */
 }
 
 .top,
@@ -47,6 +51,8 @@ body {
     align-items: center;
 }
 
+
+
 .info-box {
     display: flex;
     flex-direction: column;
@@ -60,14 +66,7 @@ body {
     flex: 0.6
 }
 
-.header-img-text {
-    position: absolute;
-    bottom: 5px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: pink;
-    font-size: 20px
-}
+
 
 .info-box > * {
     margin: 0;
@@ -100,6 +99,9 @@ body {
 
 .main {
     background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .main-topic {
@@ -108,9 +110,16 @@ body {
 
 .projects {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     overflow: auto;
     gap: 16px;
+    width: 100%;
+}
+
+@media (width < 400px) {
+    .projects {
+        grid-template-columns: 1fr;
+    }
 }
 
 .card {
@@ -199,3 +208,56 @@ body {
 h2 {
     font-size: 16px;
 }
+
+@media (max-width: 400px) {
+    .top-container {
+        flex-direction: column;
+    }
+    .socials {
+        justify-content: center;
+    }
+}
+
+.header-img-text {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: pink;
+    font-size: 20px;
+    z-index: 2; /* Ensures text appears above the image */
+}
+
+@media (min-width: 401px) and (max-width: 800px) {
+    .socials {
+        display: none;
+    }
+
+    .header-img-text {
+        top: 10px;
+        right: 10px; /* Adjusted positioning for top-right */
+        bottom: auto; /* Remove bottom positioning */
+        left: auto; /* Remove left positioning */
+        transform: none;
+        color: white;
+        font-size: 36px;
+        z-index: 2; /* Ensures text appears above the image */
+    }
+
+    .image-wrapper img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1; /* Ensures image is behind the text */
+    }
+
+    .top-container {
+        align-items: flex-start;
+    }
+
+    .info-box {
+        margin-left: -200px;
+    }
+}
+
+
